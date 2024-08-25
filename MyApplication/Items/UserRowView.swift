@@ -15,12 +15,12 @@ struct UserRowView: View {
     }
     
     init() { //for preview purpose
-        model = User(userId: nil, name: "Sailendra Salsabil", username: "sailendra", email: "lendra@gmail.com", address: nil, phone: nil, website: nil, company: nil, imageUrl: "https://randomuser.me/api/portraits/thumb/men/98.jpg", isSearchResult: true)
+        model = User(userId: nil, name: "Sailendra Salsabil", username: "sailendra", email: "lendra@gmail.com", address: nil, phone: nil, website: nil, company: nil, isSearchResult: true)
     }
     
     var body: some View {
         HStack(spacing: 20) {
-            ProfileImageView(imageUrl: model.imageUrl ?? "", size: 50, radius: 7, x: 3, y: 2)
+            ProfileImageView(imageUrl: "https://i.pravatar.cc/150", size: 50, radius: 7, x: 3, y: 2)
             VStack {
                 Text(model.name ?? "")
                     .foregroundStyle(.black)

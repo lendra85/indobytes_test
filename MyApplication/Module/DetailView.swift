@@ -30,7 +30,7 @@ struct DetailView: View {
                 .overlay(Color.black)
             ScrollView {
                 VStack {
-                    ProfileImageView(imageUrl: user.imageUrl ?? "", size: UIScreen.main.bounds.size.width / 1.5, radius: 25, x: 15, y: 12).padding(.top, 50)
+                    ProfileImageView(imageUrl: "https://i.pravatar.cc/1000", size: UIScreen.main.bounds.size.width / 1.5, radius: 25, x: 15, y: 12).padding(.top, 50)
                     Text(user.name ?? "")
                         .font(.title.weight(.bold))
                         .padding(.top, 20)
@@ -127,5 +127,5 @@ struct DetailView: View {
 }
 
 #Preview {
-    DetailView(user: User(userId: nil, name: "Sailendra Salsabil", username: "lendra", email: "sailendra.salsabil@gmail.com", address: Address(street: "Victor Plains", suite: "Suite 879", city: "Wisokyburgh", zipcode: "90566-7771", geo: nil), phone: "1-463-123-4447", website: "anastasia.net", company: nil, imageUrl: "https://randomuser.me/api/portraits/thumb/men/98.jpg", isSearchResult: nil))
+    DetailView(user: User(userId: nil, name: "Sailendra Salsabil", username: "lendra", email: "sailendra.salsabil@gmail.com", address: Address(street: "Victor Plains", suite: "Suite 879", city: "Wisokyburgh", zipcode: "90566-7771", geo: nil), phone: "1-463-123-4447", website: "anastasia.net", company: nil, isSearchResult: nil))
 }

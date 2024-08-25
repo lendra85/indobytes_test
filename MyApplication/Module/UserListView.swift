@@ -58,16 +58,9 @@ struct UserListView: View {
                         List(viewModel.listRows, id: \.id) { item in
                             UserRowView(model: item)
                                 .listRowInsets(EdgeInsets())
-//                                .sheet(isPresented: $isPresented) {
-//                                    DetailView(user: item)
-//                                }
                                 .onTapGesture {
                                     self.selectedItem = item
                                 }
-                                
-//                                .background(
-//                                    NavigationLink("", destination: DetailView(user: item).navigationBarHidden(true)).opacity(0)
-//                                )
                         }
                         .scrollContentBackground(.hidden)
                         .listRowSpacing(15)
@@ -76,9 +69,6 @@ struct UserListView: View {
                         .fullScreenCover(item: $selectedItem, onDismiss: nil) { item in
                             DetailView(user: item)
                         }
-//                        .sheet(isPresented: $isPresented) {
-//                            DetailView(user: selectedItem!)
-//                        }
                     }
                 }
             }

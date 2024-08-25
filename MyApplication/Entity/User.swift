@@ -17,11 +17,10 @@ struct User: Codable, Identifiable {
     let phone: String?
     let website: String?
     let company: Company?
-    let imageUrl: String? //for dummy only
     var isSearchResult: Bool? = false
     
     private enum CodingKeys: String, CodingKey {
         case userId = "id"
-        case name, username, email, address, phone, website, company, imageUrl
+        case name, username, email, address, phone, website, company
     }
 }

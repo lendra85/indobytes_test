@@ -32,7 +32,7 @@ final class UserListViewTest: XCTestCase {
     
     func testListRow() throws {
         let viewModel = UserListViewModel()
-        let user = User(userId: nil, name: nil, username: nil, email: nil, address: nil, phone: nil, website: nil, company: nil, imageUrl: nil, isSearchResult: nil)
+        let user = User(userId: nil, name: nil, username: nil, email: nil, address: nil, phone: nil, website: nil, company: nil, isSearchResult: nil)
         viewModel.listRows = [user]
         let view = UserListView(viewModel: viewModel)
         let list = try view.inspect().navigationView().find(ViewType.ZStack.self).find(ViewType.VStack.self).find(ViewType.ZStack.self).list(1).find(UserRowView.self)

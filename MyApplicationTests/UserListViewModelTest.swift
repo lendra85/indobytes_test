@@ -13,7 +13,7 @@ final class UserListViewModelTest: XCTestCase {
     func testPerformSearchText() {
         let keyword = "Sailendra"
         let viewModel = UserListViewModel()
-        let user = User(userId: nil, name: keyword, username: nil, email: nil, address: nil, phone: nil, website: nil, company: nil, imageUrl: nil, isSearchResult: nil)
+        let user = User(userId: nil, name: keyword, username: nil, email: nil, address: nil, phone: nil, website: nil, company: nil, isSearchResult: nil)
         viewModel.users = [user]
         viewModel.listRows = [user]
         viewModel.searchText = keyword
@@ -23,7 +23,7 @@ final class UserListViewModelTest: XCTestCase {
     
     func testPerformSearchTextNotFound() {
         let viewModel = UserListViewModel()
-        let user = User(userId: nil, name: "Sailendra", username: nil, email: nil, address: nil, phone: nil, website: nil, company: nil, imageUrl: nil, isSearchResult: nil)
+        let user = User(userId: nil, name: "Sailendra", username: nil, email: nil, address: nil, phone: nil, website: nil, company: nil, isSearchResult: nil)
         viewModel.users = [user]
         viewModel.listRows = [user]
         viewModel.searchText = "Musa"
@@ -33,7 +33,7 @@ final class UserListViewModelTest: XCTestCase {
     
     func testPerformResetSearchText() {
         let viewModel = UserListViewModel()
-        let user = User(userId: nil, name: "Sailendra", username: nil, email: nil, address: nil, phone: nil, website: nil, company: nil, imageUrl: nil, isSearchResult: nil)
+        let user = User(userId: nil, name: "Sailendra", username: nil, email: nil, address: nil, phone: nil, website: nil, company: nil, isSearchResult: nil)
         viewModel.users = [user]
         viewModel.listRows = []
         viewModel.searchText = ""
